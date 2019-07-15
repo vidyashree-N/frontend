@@ -1,0 +1,19 @@
+.fh:hover{
+    background-color: yellow;
+    border:2px inset blueviolet;
+    margin:50px; 
+
+}
+.fh2 img{
+    border-radius:50%;
+    border: blue;
+    
+}
+input:focus{
+    color:blue;
+    border:yellow;
+}
+input{
+    color:yellowgreen;
+    border:100px solid Blue solid;
+}

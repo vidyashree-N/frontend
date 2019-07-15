@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/register.css">
+    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body ng-app="">
+    
+    <center>
+    <div class="forminput">
+        
+        <form class="frm">
+
+        
+        <div class="question">
+            <label for="name">Enter the name:</label>
+            <input type="name" name="name" id="name" ng-model="name" required>
+            <span ng-show="frm.name.$error.required">*</span>
+            </div>
+            <div class="question">
+                <label for="mail">Enter the email</label>
+                <input type="mail" name="mail" id="mail" ng-model="mail" required>
+                <span style="color:red" ng-show="frm.mail.$error.required">*</span>
+                
+             
+            </div>
+            <div class="question">
+                <label for="phone">Enter the ph number</label>
+                <input type="phonenumber" name="phonenumber" id="phonenumber" ng-model="phonenumber" required>
+                <span ng-show="frm.phonenumber.$error.required">*</span>
+            </div>
+            <div class="question">
+                <label for="pass">Enter the password</label>
+                <input type="password" name="pass" id="pass" ng-model="pass" ng-minlength="6" ng-maxlength="10" required>
+                <span ng-show="frm.pass.$error.minlength">too min</span>
+                <span ng-show="frm.pass.$error.maxlength">too max</span>
+            </div>
+            <div class="question">
+                <label for="password">Enter the conform password</label>
+                <input type="cpass" name="cpass" id="cpass" ng-model="cpass" ng-minlength="6" ng-maxlength="10"required>
+                
+                <span ng-show="frm.cpass.$error.minlength">too min</span>
+                <span ng-show="frm.cpass.$error.maxlength">too max</span>
+            </div>
+        
+    
+    
+    
+        
+        <button onclick="submit()">Submit</button>
+        
+        <script>
+        function submit(){
+            var pass=document.getElementById("pass").value;
+            var cpass=document.getElementById("cpass").value;
+            
+            if(pass!=cpass)
+            {
+                swal("Good job!", "You clicked the button!", "warning");
+            }
+        }
+        
+        </script>
+        </form>
+    </div>
+</center>
+</body>
+</html>
